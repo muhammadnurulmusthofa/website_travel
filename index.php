@@ -12,7 +12,13 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="style3.css">
 
-</head>
+</head> 
+    <?php
+    session_start();
+    if($_SESSION['status'] != "login"){
+        header("location:signin.php?pesan= anda belum_login");
+    }
+    
 <body>
     <!-- audio -->
     <audio hidden autoplay loop>
